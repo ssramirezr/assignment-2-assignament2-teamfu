@@ -6,7 +6,6 @@ public class Main {
         int n = entrada.length();
         Set<String>[][] tabla = new Set[n + 1][n + 1];
 
-        // Llenar las entradas de la tabla para subcadenas de l 1
         for (int i = 1; i <= n; i++) {
             for (Map.Entry<String, Set<String>> entradaCFG : CFG.entrySet()) {
                 String noTerminal = entradaCFG.getKey();
@@ -18,7 +17,6 @@ public class Main {
             }
         }
 
-        // Llenar las entradas de la tabla para subcadenas más largas
         for (int l = 2; l <= n; l++) {
             for (int i = 0; i <= n - l; i++) {
                 int f = i + l;
